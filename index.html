@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Please open in Browser</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#fff;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+.arrow{position:absolute;top:45px;right:25px;width:105px;height:230px}
+.arrow path{fill:none;stroke:#000;stroke-width:8;stroke-linecap:round}
+.arrow polygon{fill:#000}
+.message{position:absolute;top:31%;width:100%;text-align:center;font-size:clamp(28px,6vw,48px);font-weight:700}
+</style>
+</head>
+<body>
+<svg class="arrow" viewBox="0 0 110 230" aria-hidden="true">
+<path d="M10 205 C70 205,85 155,88 75 C89 55,95 35,102 22"/>
+<polygon points="102,5 88,28 112,28"/>
+</svg>
+<div class="message">Please open in Browser</div>
+<script>
+const destination="https://t.me/edgohalgoh";
+const ua=navigator.userAgent||"";
+const inApp=/Instagram|FBAN|FBAV|TikTok|Twitter|Line|Snapchat|Pinterest/i.test(ua);
+if(!inApp){window.location.replace(destination);}
+</script>
+</body>
+</html>
